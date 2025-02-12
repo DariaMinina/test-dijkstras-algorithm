@@ -1,0 +1,30 @@
+plugins {
+    id 'java'
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'junit:junit:4.13.2'
+}
+
+sourceCompatibility = '1.8'
+targetCompatibility = '1.8'
+
+test {
+    useJUnit()
+}
+
+
+task profile(type: JavaExec) {
+    classpath = sourceSets.main.runtimeClasspath
+    main = 'org.example.PerformanceRunner'
+    jvmArgs = [
+            "-agentpath:/Users/dascha/IdeaProjects/lab1/async-profiler/build/lib/libasyncProfiler.dylib=start,event=cpu,file=profile.html"
+    ]
+}
