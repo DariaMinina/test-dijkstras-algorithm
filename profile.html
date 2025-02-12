@@ -14,7 +14,7 @@
 	#status {left: 0}
 	#match {right: 0}
 	#reset {cursor: pointer}
-	#canvas {width: 100%; height: 224px}
+	#canvas {width: 100%; height: 368px}
 </style>
 </head>
 <body style='font: 12px Verdana, sans-serif'>
@@ -33,7 +33,7 @@
 	let level0 = 0, left0 = 0, width0 = 0;
 	let nav = [], navIndex, matchval;
 	let reverse = false;
-	const levels = Array(14);
+	const levels = Array(23);
 	for (let h = 0; h < levels.length; h++) {
 		levels[h] = [];
 	}
@@ -280,20 +280,48 @@
 const cpool = [
 'all',
 ' C2Compiler::compile_method',
-'!ompile::Code_Gen',
+'!odeEmitInfo::record_debug_info',
+'"mpilation::Compilation',
+'-compile_java_method',
+'5method',
+'-emit_code_body',
+'&e::Code_Gen',
 '+mpile',
-')Optimize',
-')final_graph_reshaping',
-'>_walk',
 '\'Broker::compiler_thread_loop',
 '/invoke_compiler_on_method',
-' JavaThread::thread_main_inner',
-' LoadINode::Opcode',
-' PhaseChaitin::Register_Allocate',
-'.elide_copy',
-'.post_allocate_copy_removal',
+'\'r::compile_method',
+' DebugInformationRecorder::create_scope_values',
+':serialize_scope_values',
+' IRScopeDebugInfo::record_debug_info',
+' JNI_CreateJavaVM',
+'!avaMain',
+'$Thread::start_internal_daemon',
+',thread_main_inner',
+' LIR_Assembler::add_call_info',
+'/call',
+'/emit_call',
+'5ode',
+'4lir_list',
+' Management::initialize',
+'"tcher::Fixup_Save_On_Entry',
+')Label_Root',
+')init_first_stack_mask',
+')match',
+'._tree',
+')xform',
+' NotificationThread::initialize',
+' ScanHazardPtrGatherThreadsListClosure::do_thread',
 ' Thread::call_run',
+'&JavaMain',
+'&s::add',
+')create_vm',
+')non_java_threads_do',
+'\'SMRSupport::add_thread',
+'3free_list',
+'!ypeNode::ideal_reg',
 ' _pthread_start',
+' java/util/HashMap$KeyIterator.<init>',
+'5Set.iterator',
 ' org/example/Graph.getShortestPath',
 ',PerformanceRunner.main',
 ' thread_native_entry',
@@ -301,26 +329,55 @@ const cpool = [
 ];
 unpack(cpool);
 
-n(3,4)
-u(137,2)
-u(134,2,0,2,0)
-f(155,1,2)
+n(3,6)
+u(361,2)
+u(358,2,0,1,0)
+f(345,3,1,1)
+u(336)
+f(379,1,1,4)
+u(331)
+u(275,1)
+u(131)
 u(123)
+u(292)
+u(196)
+u(252)
+u(140)
+u(284)
+u(308)
+u(316)
+u(300)
+u(260)
+f(372,3,1,3)
+u(268)
 u(148)
-u(116)
 u(76)
-u(60)
-u(68)
-u(12)
-u(28)
-u(20,1)
-u(92)
-u(108)
-u(100)
-f(36,10,1)
-u(44)
-u(52)
 u(84)
+u(12,2)
+u(68)
+u(60)
+u(228)
+u(204,1)
+u(220)
+f(244,12,1)
+u(236)
+u(212)
+u(324)
+f(92,8,1)
+u(28)
+u(44)
+u(36)
+u(52)
+u(180)
+u(188)
+u(172)
+u(164)
+u(156)
+u(20)
+u(116)
+u(116)
+u(100)
+u(108)
 
 search();
 </script></body></html>
